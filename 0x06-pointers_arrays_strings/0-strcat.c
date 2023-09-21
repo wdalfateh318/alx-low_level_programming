@@ -1,4 +1,4 @@
-#include "main.h"
+#include "holberton.h"
 /**
  * _strcat - concatenates 2 strings.
  * @dest: string with concatenation
@@ -7,21 +7,14 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	int lengthD, lengthS;
+	int c, c2;
 
-	lengthD = 0;
-	lengthS = 0;
+	c = 0;
+	while (dest[c])
+		c++;
 
-	while (*(dest + lengthD) != '\0')
-		lengthD++;
-
-	while (*(src + lengthS) != '\0' && lengthD < 97)
-	{
-		*(dest + lengthD) = *(src + lengthS);
-		lengthD++;
-		lengthS++;
-	}
-	*(dest + lengthD) = '\0';
+	for (c2 = 0; src[c2] ; c2++)
+	dest[c++] = src[c2]
 	return (dest);
 }
 
